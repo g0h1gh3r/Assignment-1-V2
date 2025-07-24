@@ -56,4 +56,21 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    // ViewModel and LiveData
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.2")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.9.2")
+
+    // RecyclerView
+    implementation("androidx.recyclerview:recyclerview:1.4.0")
+
+    // Image loading (Glide)
+    implementation("com.github.bumptech.glide:glide:4.14.2")
+
+    // JSON parsing
+    implementation("com.google.code.gson:gson:2.11.0")
+
+    // Testing
+    testImplementation(libs.junit)
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
