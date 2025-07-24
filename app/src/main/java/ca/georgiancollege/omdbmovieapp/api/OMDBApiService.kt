@@ -8,12 +8,14 @@ import java.net.URL
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import com.google.gson.Gson
+
+// Import your data classes with correct package name
 import ca.georgiancollege.omdbmovieapp.model.Movie
 import ca.georgiancollege.omdbmovieapp.model.MovieSearch
 import ca.georgiancollege.omdbmovieapp.model.MovieDetails
 
 class OMDBApiService {
-    private val apiKey = "f9b9618f"
+    private val apiKey = "YOUR_API_KEY_HERE" // Replace with your actual API key
     private val baseUrl = "http://www.omdbapi.com/"
     private val gson = Gson()
 
