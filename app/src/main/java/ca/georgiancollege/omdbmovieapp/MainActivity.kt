@@ -77,4 +77,5 @@ class MainActivity : AppCompatActivity() {
             binding.tvError.visibility = if (error.isNotEmpty()) View.VISIBLE else View.GONE
         }
     }
+
 }
