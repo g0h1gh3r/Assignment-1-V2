@@ -1,19 +1,16 @@
 package ca.georgiancollege.omdbmovieapp.api
 
 import android.util.Log
-import java.io.BufferedReader
-import java.io.InputStreamReader
 import java.net.HttpURLConnection
 import java.net.URL
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import com.google.gson.Gson
-import ca.georgiancollege.omdbmovieapp.model.Movie
 import ca.georgiancollege.omdbmovieapp.model.MovieSearch
 import ca.georgiancollege.omdbmovieapp.model.MovieDetails
 
 class OMDBApiService {
-    private val apiKey = "f9b9618f" // Replace with your actual API key
+    private val apiKey = "f9b9618f"
     private val baseUrl = "http://www.omdbapi.com/"
     private val gson = Gson()
 
@@ -54,7 +51,7 @@ class OMDBApiService {
     suspend fun getMovieDetails(imdbId: String): MovieDetails? {
         return withContext(Dispatchers.IO) {
             try {
-                // Correct format: ?apikey=[yourkey]&i=[imdb_id]
+
                 val urlString = "${baseUrl}?apikey=${apiKey}&i=${imdbId}"
                 Log.d("OMDBApi", "Details URL: $urlString")
 
