@@ -14,6 +14,10 @@ class DetailsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //hide the title
+        supportActionBar?.hide()
+
+        setContentView(R.layout.activity_details)
         binding = ActivityDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
